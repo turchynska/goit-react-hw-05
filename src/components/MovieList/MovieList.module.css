@@ -1,24 +1,25 @@
-.container{
-    padding: 20px 20px;
+.container {
+  padding: 15px 15px;
 }
 
-.list{
-    display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
+.list {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-.item{
-width: calc(100% - (18 * 3) / 4);
-padding: 0 0 40px;
-border: 1px solid #161827;
-border-radius: 8px;
-background-color: #b8c6fc;
-transition: all 0.3s ease-in;
+.item {
+  width: calc((100% - (18px * 3)) / 4);
+  padding: 0 0 20px;
+  border: 1px solid #161827;
+  border-radius: 8px;
+  background-color: #bbd4ff;
+  transition: all 0.3s ease-in;
+  text-align: center;
 }
 
 .item:hover {
-    box-shadow: 0px 10px 20px -10px #3d3d3d;
-    transform: scale(1.05);
-    background-color: transparent;
-  }
+  box-shadow: 0px 10px 20px -10px #3d3d3d;
+  transform: scale(1.05);
+  background-color: transparent;
+}
