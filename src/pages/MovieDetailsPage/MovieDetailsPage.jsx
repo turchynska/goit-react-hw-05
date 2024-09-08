@@ -40,9 +40,9 @@ const MovieDetailsPage = () => {
     return <p>Loading...</p>;
   }
 
-  const { title, backdrop_path, overview, genres, vote_averege } = movie;
+  const { title, backdrop_path, overview, genres, vote_average } = movie;
   const imageUrl = `https://image.tmdb.org/t/p/original${backdrop_path}`;
-  const score = (vote_averege * 10).toFixed(0);
+  const score = (vote_average * 10).toFixed(0);
 
   return (
     <div className={css.container}>

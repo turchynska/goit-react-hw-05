@@ -18,7 +18,7 @@ const MoviePage = () => {
            setLoading(true);
            const response = await getData(searchQuery); 
 
-           if(!response || response.results){
+           if(!response || response.results.length === 0){
             toast.info("No movies found for your request.",{
                 position: "top-right",
                 hideProgressBar: false,

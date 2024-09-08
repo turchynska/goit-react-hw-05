@@ -6,7 +6,7 @@ import css from "./MovieCast.module.css"
 
 const MovieCast = () => {
     const [ movieCast, setMovieCast] = useState([]);
-    const {moveId} = useParams();
+    const {movieId} = useParams();
     const [loading, setLoading] = useState(false)
 
     useEffect (() => {
@@ -14,7 +14,7 @@ const MovieCast = () => {
         async function fetchPopularMovies() {
             try {
                 setLoading(true)
-                const castData = await getCast(moveId)
+                const castData = await getCast(movieId)
                 setMovieCast(castData.cast)
             } catch (error) {
                 console.log(error)
@@ -24,8 +24,7 @@ const MovieCast = () => {
         }
 
         fetchPopularMovies();
-    }, [moveId]);
-
+    }, [movieId]);
     const filterCast = movieCast.filter(cast => cast.known_for_department === 'Acting' && cast.profile_path !== null && cast.popularity > 25); 
 
     return(

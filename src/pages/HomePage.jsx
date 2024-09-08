@@ -12,8 +12,8 @@ const HomePage = () => {
     const fetchPopularMovies = async() => {
         try{
             setLoading(true);
-            const responce = await getTrendingMovies();
-            setMovies(responce.results);
+            const response = await getTrendingMovies();
+            setMovies(response.results);
         }catch(error){
 console.log(error);
 return toast.error("Try again, can`t load movies at this time", {

@@ -6,7 +6,7 @@ import css from "./MovieReviews.module.css"
 
 const MovieReviews = () => {
     const [ reviews, setReviews ] = useState([]);
-    const {moveId} = useParams();
+    const {movieId} = useParams();
     const [loading, setLoading] = useState(false)
 
 
@@ -15,7 +15,7 @@ const MovieReviews = () => {
         async function fetchReviews() {
             try {
                 setLoading(true);
-                const castData = await getReviews(moveId)
+                const castData = await getReviews(movieId)
                 setReviews(castData.results)
             } catch (error) {
                 console.log(error)
@@ -24,7 +24,7 @@ const MovieReviews = () => {
             }
         }
         fetchReviews();
-    }, [moveId])
+    }, [movieId])
 
     if(reviews.length === 0) {
         return <p className={css.noReviews} >There are no reviews</p>

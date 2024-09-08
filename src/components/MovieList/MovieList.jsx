@@ -1,11 +1,11 @@
 import css from "./MovieList.module.css"
 import MoviesItem from "../MoviesItem/MoviesItem"
 
-const MoviesList = ({movies}) => {
+const MoviesList = ({ movies }) => {
 return(
     <div className={css.container}>
 <ul className={css.list}>
-{movies.map(movie =>(
+{movies.map(movie => (
     <li key={movie.id}
     className={css.item}
     >
